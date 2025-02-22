@@ -8,6 +8,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = 'https://67b37562392f4aa94fa74786.mockapi.io';
 
+// в useEffect щось створили, див ТодоЛіст строка 23:  dispatch(fetchData({ signal: abortController.signal }, { signal } сюди передали 
 // fetchData - довільна назва функції
 // createAsyncThunk - все бере на себе     //назва action      // якщо  { signal } він же body не потрібен ставимо  _, (нижнє підкреслення)
 export const fetchData = createAsyncThunk('todos/fetchData', async ({ signal }, thunkAPI) => {
